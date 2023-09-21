@@ -80,9 +80,9 @@ alias kbg="kb grep"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	z
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        z
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,5 +118,5 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/gf/gf-completion.zsh
 
 # python for ~/.local/bin
-export PATH=/home/leadlife/.local/bin:$PATH
-export PATH=/home/leadlife/go/bin:$PATH
+export PATH=/root/.local/bin:$PATH
+export PATH=/root/go/bin:$PATH
