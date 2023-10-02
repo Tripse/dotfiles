@@ -10,15 +10,16 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="duellj"
 
+# mcfly
+eval "$(mcfly init zsh)"
 # alias for me
-# alias open="xdg-open"
-alias kbl="kb list"
-alias kbe="kb edit"
-alias kba="kb add"
-alias kbv="kb view"
-alias kbd="kb delete --id"
-alias kbg="kb grep"
 
+alias open="xdg-open"
+# alias cat='bat'
+alias du='dust'
+alias df='duf'
+alias man='tldr'
+alias top='htop'
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -82,9 +83,10 @@ alias kbg="kb grep"
 plugins=(
         zsh-autosuggestions
         zsh-syntax-highlighting
-        z
 )
 
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -115,7 +117,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 # gf use
-source /usr/share/gf/gf-completion.zsh
+# source /usr/share/gf/gf-completion.zsh
 
 # python for ~/.local/bin
 export PATH=/root/.local/bin:$PATH
